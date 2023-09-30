@@ -6,6 +6,7 @@ class Ui(QtWidgets.QDialog, Form):
     def __init__(self):
         super(Ui, self).__init__()
         self.setupUi(self)
+        
         self.label_test.setText("UI started... OK!")
 
 if __name__ == "__main__":
