@@ -6,9 +6,16 @@ class Ui(QtWidgets.QDialog, Form):
     def __init__(self):
         super(Ui, self).__init__()
         self.setupUi(self)
+        self.test_label.setText("UI started... OK!")
+        self.start_button.clicked.connect(self.start_button_onclick)
+        self.stop_button.clicked.connect(self.stop_button_onclick)
         
-        self.label_test.setText("UI started... OK!")
+    def start_button_onclick(self):
+        self.test_label.setText("Start")        
 
+    def stop_button_onclick(self):
+        self.test_label.setText("Stop")
+        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
